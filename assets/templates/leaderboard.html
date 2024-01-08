@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block content %}
+
+<style>
+
+    .black-text{
+      color: black;
+    }
+
+</style>
+
+<div class="column is-4 is-offset-4">
+  <h3 class="title">Leaderboard</h3>
+  <div class="column is-multiline">
+    {% for user in top_users %}
+   <div class="card is-horizontal"> 
+    <div class="card-image">
+      <figure class="image">
+        <img
+          src="../pexels-kris-møklebust.jpg"
+          alt="Placeholder image"
+        />
+      </figure>
+    </div>
+    <div class="card-content">
+      <div class="media">
+        <div class="media-left">
+          <figure class="image is-48x48">
+            <img
+              src="https://bulma.io/images/placeholders/96x96.png"
+              alt="Placeholder image"
+            />
+          </figure>
+        </div>
+        <div class="media-content">
+          <p class="title is-4">John Smith</p>
+          <p class="subtitle is-6">@johnsmith</p>
+  </div>
+</div>
+      <div class="content">This is a card.</div>
+      
+    </div>
+</div>
+      {% endfor %}
+    </div>
+  </div>
+
+
+  </div>
+    {% endblock %}
+  </div>
+</div>

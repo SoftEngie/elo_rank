@@ -6,7 +6,8 @@ from elo_rank.models.users import User
 
 
 def create_app():
-    app = Flask(__name__, template_folder=assets_folder / "templates")
+    app = Flask(__name__, template_folder=assets_folder /
+                "templates", static_folder=assets_folder / "static")
 
     app.config["SECRET_KEY"] = "secret-key-goes-here"  # todo: use env variable
     app.config[
@@ -37,6 +38,7 @@ def create_app():
 def launch():
     app = create_app()
     app.run(debug=True)
+
 
 if __name__ == '__main__':
     launch()
